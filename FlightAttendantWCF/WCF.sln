@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirLine.Emirates", "AirLine.Emirates\AirLine.Emirates.csproj", "{1527571D-2C3A-4F34-8A92-C89A29639E1C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emirates", "AirLine\Emirates\Emirates.csproj", "{1527571D-2C3A-4F34-8A92-C89A29639E1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Airline", "Airline", "{2D9A3880-F70B-4437-9300-FDDFDED9600E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +20,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1527571D-2C3A-4F34-8A92-C89A29639E1C} = {2D9A3880-F70B-4437-9300-FDDFDED9600E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD328B93-5432-414C-9505-BEC520547801}
