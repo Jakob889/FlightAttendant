@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="97f5c412-54e2-447b-8d7e-31f9c591e5a7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="System.Data" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:52517/Service_Flights.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service_Flights.xsd" MetadataType="Schema" ID="6efce0d5-1d29-4e77-985f-72857ce317a1" SourceId="1" SourceUrl="http://localhost:52517/Service_Flights.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service_Flights.disco" MetadataType="Disco" ID="8aeb962c-1f1f-49a6-8dda-c005a53bf7ec" SourceId="1" SourceUrl="http://localhost:52517/Service_Flights.svc?disco" />
+    <MetadataFile FileName="Service_Flights1.xsd" MetadataType="Schema" ID="7b50cc6e-2be2-4532-b489-4120a82c5883" SourceId="1" SourceUrl="http://localhost:52517/Service_Flights.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service_Flights2.xsd" MetadataType="Schema" ID="12192ead-b204-4aef-bf11-864f55a45b90" SourceId="1" SourceUrl="http://localhost:52517/Service_Flights.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service_Flights3.xsd" MetadataType="Schema" ID="915ca0cc-eb7b-4571-879c-604b7aacf3e8" SourceId="1" SourceUrl="http://localhost:52517/Service_Flights.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service_Flights.wsdl" MetadataType="Wsdl" ID="7b28d628-5004-47c8-bf56-85bf8095a8d7" SourceId="1" SourceUrl="http://localhost:52517/Service_Flights.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
