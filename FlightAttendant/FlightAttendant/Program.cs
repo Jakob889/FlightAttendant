@@ -14,9 +14,15 @@ namespace FlightAttendant
         [STAThread]
         static void Main()
         {
+            FlightServiceReferenceEmirates.FlightServiceClient obj = new FlightServiceReferenceEmirates.FlightServiceClient();
+            Console.WriteLine(obj.GetFlights());
+            Console.Read();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
+
+
         }
     }
 }
