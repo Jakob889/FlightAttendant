@@ -15,17 +15,9 @@ namespace FlightAttendant
         [STAThread]
         static void Main()
         {
-            FlightServiceReferenceEmirates.FlightServiceClient obj = new FlightServiceReferenceEmirates.FlightServiceClient();
-            Console.WriteLine(obj.GetFlights());
-            Console.Read();
+            var stage = new Stage();
+            stage.Load();
 
-            //db load
-            using (var ctx = new FlightAttendantEntities())
-            {
-                var flight1 = new Flights() { FlightNr = "FL1", From = "ZRH", To = "DBU", Seats = 4 };
-                ctx.Flights.Add(flight1);
-                ctx.SaveChanges();
-            }
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

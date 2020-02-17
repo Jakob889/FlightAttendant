@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlightAttendant.Staging;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,7 @@ namespace FlightAttendant
             dt.Columns.Add("FlightNumber");
             dt.Columns.Add("From");
             dt.Columns.Add("To");
+            dt.Columns.Add("Steats");
             //dt.Columns.Add("DepartDay");
             //dt.Columns.Add("DepartTime");
             //dt.Columns.Add("TravelTime");
@@ -29,13 +31,13 @@ namespace FlightAttendant
             //dt.Columns.Add("SeatsBusiness");
             //dt.Columns.Add("SeatsEconomy");
 
-            dt.Rows.Add(new object[] { "EK102", "Zürich", "Dubai" });
-            dt.Rows.Add(new object[] { "EK102", "Dubai", "Zürich" });
-            dt.Rows.Add(new object[] { "EK044", "London", "Dubai" });
-            dt.Rows.Add(new object[] { "EK044", "Dubai", "London" });
-            
+            using (var ctx = new FlightAttendantEntities())
+            {
+                var dbflights = ctx.Flights;
 
-            dataGridView1.DataSource = dt;
+                dataGridView1.DataSource = dt;
+                dataGridView1.DataSource = dbflights.ToList();
+            }
         }
 
 
