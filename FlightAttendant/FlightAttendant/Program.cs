@@ -23,12 +23,6 @@ namespace FlightAttendant
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
 
-
-
-
-
-
-
         }
     }
 }

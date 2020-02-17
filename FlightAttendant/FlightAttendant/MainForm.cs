@@ -17,27 +17,7 @@ namespace FlightAttendant
         public MainForm()
         {
             InitializeComponent();
-
-            DataTable dt = new DataTable("flights");
-            dt.Clear();
-            dt.Columns.Add("FlightNumber");
-            dt.Columns.Add("From");
-            dt.Columns.Add("To");
-            dt.Columns.Add("Steats");
-            //dt.Columns.Add("DepartDay");
-            //dt.Columns.Add("DepartTime");
-            //dt.Columns.Add("TravelTime");
-            //dt.Columns.Add("SeatsFirst");
-            //dt.Columns.Add("SeatsBusiness");
-            //dt.Columns.Add("SeatsEconomy");
-
-            using (var ctx = new FlightAttendantEntities())
-            {
-                var dbflights = ctx.Flights;
-
-                dataGridView1.DataSource = dt;
-                dataGridView1.DataSource = dbflights.ToList();
-            }
+            dataGridView1.DataSource = DBLoad.GetFlights();
         }
 
 

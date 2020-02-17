@@ -28,8 +28,8 @@ namespace Emirates
         string from = null;
         string to = null;
         int seats = 0;
-        //DateTime depart = null;
-        //DateTime arrive = null;
+        string depart = null;
+        string arrive = null;
 
         [DataMember]
         public string FlightNr
@@ -59,19 +59,19 @@ namespace Emirates
             set { seats = value; }
         }
 
-        //[DataMember]
-        //public string Depart
-        //{
-        //    get { return depart; }
-        //    set { depart = value; }
-        //}
+        [DataMember]
+        public string Depart
+        {
+            get { return depart; }
+            set { depart = value; }
+        }
 
-        //[DataMember]
-        //public string Arrive
-        //{
-        //    get { return arrive; }
-        //    set { arrive = value; }
-        //}
+        [DataMember]
+        public string Arrive
+        {
+            get { return arrive; }
+            set { arrive = value; }
+        }
     }
     public class NoFlightsException
     {

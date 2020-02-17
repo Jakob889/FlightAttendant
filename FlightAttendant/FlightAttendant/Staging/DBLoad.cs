@@ -6,9 +6,21 @@ using System.Threading.Tasks;
 
 namespace FlightAttendant.Staging
 {
-    class DBLoad
+    public class DBLoad
     {
 
+        private static FlightAttendantEntities ctx;
+        public static FlightAttendantEntities Context
+        {
+            get
+            {
+                if (ctx == null)
+                {
+                    ctx = new FlightAttendantEntities();
+                }
+                return ctx;
+            }
+        }
         //public void Load(DbSet dBSet)
         //{
         //    using (var ctx = new FlightAttendantEntities())
@@ -17,5 +29,9 @@ namespace FlightAttendant.Staging
         //        return dbflights;
         //    }
         //}
+        public static List<Flights> GetFlights()
+        {
+            return Context.Flights /*.Where(x => x.FlightDate > DateTime.Now)*/.ToList();
+        }
     }
 }
