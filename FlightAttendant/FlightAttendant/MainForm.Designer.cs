@@ -31,9 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.compositeTypeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.compositeTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.datePicker_Dep = new System.Windows.Forms.DateTimePicker();
             this.datePicker_ret = new System.Windows.Forms.DateTimePicker();
             this.Dropdown_From = new System.Windows.Forms.ComboBox();
@@ -43,9 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.compositeTypeBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.compositeTypeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -59,17 +55,9 @@
             this.dataGridView1.Size = new System.Drawing.Size(995, 386);
             this.dataGridView1.TabIndex = 0;
             // 
-            // compositeTypeBindingSource1
-            // 
-            this.compositeTypeBindingSource1.DataSource = typeof(FlightAttendant.ServiceReference_Emirates.CompositeType);
-            // 
             // dataTableBindingSource
             // 
             this.dataTableBindingSource.DataSource = typeof(System.Data.DataTable);
-            // 
-            // compositeTypeBindingSource
-            // 
-            this.compositeTypeBindingSource.DataSource = typeof(FlightAttendant.ServiceReference_Emirates.CompositeType);
             // 
             // datePicker_Dep
             // 
@@ -166,9 +154,7 @@
             this.Name = "MainForm";
             this.Text = "FlightAttendent";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.compositeTypeBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.compositeTypeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,8 +164,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource dataTableBindingSource;
-        private System.Windows.Forms.BindingSource compositeTypeBindingSource;
-        private System.Windows.Forms.BindingSource compositeTypeBindingSource1;
         private System.Windows.Forms.DateTimePicker datePicker_Dep;
         private System.Windows.Forms.DateTimePicker datePicker_ret;
         private System.Windows.Forms.ComboBox Dropdown_From;

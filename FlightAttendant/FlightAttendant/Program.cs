@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlightAttendant.Staging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,20 @@ namespace FlightAttendant
         [STAThread]
         static void Main()
         {
+            var stage = new Stage();
+            stage.Load();
+
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
+
+
+
+
+
+
+
         }
     }
 }
