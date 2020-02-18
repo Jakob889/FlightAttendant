@@ -13,29 +13,30 @@
           <Property Name="From" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="To" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Seats" Type="int" Nullable="false" />
+          <Property Name="Depart" Type="date" Nullable="false" />
+          <Property Name="Arrive" Type="date" Nullable="false" />
         </EntityType>
-        <EntityType Name="Hotels">
+        <EntityType Name="Hotelrooms">
           <Key>
-            <PropertyRef Name="HotelID" />
+            <PropertyRef Name="HotelroomID" />
           </Key>
-          <Property Name="HotelID" Type="int" Nullable="false" />
+          <Property Name="HotelroomID" Type="int" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="City" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="RoomNr" Type="int" Nullable="false" />
-          <Property Name="from" Type="date" Nullable="false" />
-          <Property Name="To" Type="date" Nullable="false" />
+          <Property Name="Checkout" Type="date" Nullable="false" />
+          <Property Name="Checkin" Type="date" Nullable="false" />
         </EntityType>
         <EntityContainer Name="FlightAttendantModelStoreContainer">
           <EntitySet Name="Flights" EntityType="Self.Flights" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Hotels" EntityType="Self.Hotels" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hotelrooms" EntityType="Self.Hotelrooms" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="FlightAttendantModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="FlightAttendantEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="FlightsSet" EntityType="FlightAttendantModel.Flights" />
-          <EntitySet Name="HotelsSet" EntityType="FlightAttendantModel.Hotels" />
+          <EntitySet Name="Flights" EntityType="FlightAttendantModel.Flights" />
+          <EntitySet Name="Hotelrooms" EntityType="FlightAttendantModel.Hotelrooms" />
           </EntityContainer>
         <EntityType Name="Flights">
           <Key>
@@ -45,17 +46,18 @@
           <Property Name="From" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="To" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Seats" Type="Int32" Nullable="false" />
+          <Property Name="Depart" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Arrive" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
-        <EntityType Name="Hotels">
+        <EntityType Name="Hotelrooms">
           <Key>
-            <PropertyRef Name="HotelID" />
+            <PropertyRef Name="HotelroomID" />
           </Key>
-          <Property Name="HotelID" Type="Int32" Nullable="false" />
+          <Property Name="HotelroomID" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="City" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="RoomNr" Type="Int32" Nullable="false" />
-          <Property Name="from" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="To" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Checkout" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Checkin" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -63,9 +65,11 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="FlightAttendantModelStoreContainer" CdmEntityContainer="FlightAttendantEntities">
-          <EntitySetMapping Name="FlightsSet">
+          <EntitySetMapping Name="Flights">
             <EntityTypeMapping TypeName="FlightAttendantModel.Flights">
               <MappingFragment StoreEntitySet="Flights">
+                <ScalarProperty Name="Arrive" ColumnName="Arrive" />
+                <ScalarProperty Name="Depart" ColumnName="Depart" />
                 <ScalarProperty Name="Seats" ColumnName="Seats" />
                 <ScalarProperty Name="To" ColumnName="To" />
                 <ScalarProperty Name="From" ColumnName="From" />
@@ -73,15 +77,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="HotelsSet">
-            <EntityTypeMapping TypeName="FlightAttendantModel.Hotels">
-              <MappingFragment StoreEntitySet="Hotels">
-                <ScalarProperty Name="To" ColumnName="To" />
-                <ScalarProperty Name="from" ColumnName="from" />
-                <ScalarProperty Name="RoomNr" ColumnName="RoomNr" />
+          <EntitySetMapping Name="Hotelrooms">
+            <EntityTypeMapping TypeName="FlightAttendantModel.Hotelrooms">
+              <MappingFragment StoreEntitySet="Hotelrooms">
+                <ScalarProperty Name="Checkin" ColumnName="Checkin" />
+                <ScalarProperty Name="Checkout" ColumnName="Checkout" />
                 <ScalarProperty Name="City" ColumnName="City" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="HotelID" ColumnName="HotelID" />
+                <ScalarProperty Name="HotelroomID" ColumnName="HotelroomID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

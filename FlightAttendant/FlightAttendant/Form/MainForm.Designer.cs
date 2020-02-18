@@ -34,14 +34,16 @@
             this.dataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.datePicker_Dep = new System.Windows.Forms.DateTimePicker();
             this.datePicker_ret = new System.Windows.Forms.DateTimePicker();
-            this.Dropdown_From = new System.Windows.Forms.ComboBox();
+            this.Dropdown_Destination = new System.Windows.Forms.ComboBox();
             this.button_Search = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.flightBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -75,14 +77,14 @@
             this.datePicker_ret.Size = new System.Drawing.Size(262, 22);
             this.datePicker_ret.TabIndex = 3;
             // 
-            // Dropdown_From
+            // Dropdown_Destination
             // 
-            this.Dropdown_From.AccessibleName = "From";
-            this.Dropdown_From.FormattingEnabled = true;
-            this.Dropdown_From.Location = new System.Drawing.Point(61, 162);
-            this.Dropdown_From.Name = "Dropdown_From";
-            this.Dropdown_From.Size = new System.Drawing.Size(167, 24);
-            this.Dropdown_From.TabIndex = 5;
+            this.Dropdown_Destination.AccessibleName = "From";
+            this.Dropdown_Destination.FormattingEnabled = true;
+            this.Dropdown_Destination.Location = new System.Drawing.Point(61, 162);
+            this.Dropdown_Destination.Name = "Dropdown_Destination";
+            this.Dropdown_Destination.Size = new System.Drawing.Size(232, 24);
+            this.Dropdown_Destination.TabIndex = 5;
             // 
             // button_Search
             // 
@@ -136,6 +138,10 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Depart";
             // 
+            // flightBindingSource
+            // 
+            this.flightBindingSource.DataSource = typeof(FlightAttendant.FlightServiceReferenceEmirates.Flight);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -146,7 +152,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_Search);
-            this.Controls.Add(this.Dropdown_From);
+            this.Controls.Add(this.Dropdown_Destination);
             this.Controls.Add(this.datePicker_ret);
             this.Controls.Add(this.datePicker_Dep);
             this.Controls.Add(this.dataGridView1);
@@ -155,6 +161,7 @@
             this.Text = "FlightAttendent";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,12 +173,13 @@
         private System.Windows.Forms.BindingSource dataTableBindingSource;
         private System.Windows.Forms.DateTimePicker datePicker_Dep;
         private System.Windows.Forms.DateTimePicker datePicker_ret;
-        private System.Windows.Forms.ComboBox Dropdown_From;
+        private System.Windows.Forms.ComboBox Dropdown_Destination;
         private System.Windows.Forms.Button button_Search;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.BindingSource flightBindingSource;
     }
 }
 

@@ -8,37 +8,37 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FlightAttendant.FlightServiceReferenceEmirates {
+namespace FlightAttendant.HotelServiceReferenceMarriott {
     using System.Runtime.Serialization;
     using System;
     
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Flight", Namespace="http://schemas.datacontract.org/2004/07/Emirates")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Room", Namespace="http://schemas.datacontract.org/2004/07/")]
     [System.SerializableAttribute()]
-    public partial class Flight : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Room : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ArriveField;
+        private string CheckinField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DepartField;
+        private string CheckoutField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FlightNrField;
+        private string CityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FromField;
+        private int HotelIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int SeatsField;
+        private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ToField;
+        private int RoomNrField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -51,79 +51,79 @@ namespace FlightAttendant.FlightServiceReferenceEmirates {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Arrive {
+        public string Checkin {
             get {
-                return this.ArriveField;
+                return this.CheckinField;
             }
             set {
-                if ((object.ReferenceEquals(this.ArriveField, value) != true)) {
-                    this.ArriveField = value;
-                    this.RaisePropertyChanged("Arrive");
+                if ((object.ReferenceEquals(this.CheckinField, value) != true)) {
+                    this.CheckinField = value;
+                    this.RaisePropertyChanged("Checkin");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Depart {
+        public string Checkout {
             get {
-                return this.DepartField;
+                return this.CheckoutField;
             }
             set {
-                if ((object.ReferenceEquals(this.DepartField, value) != true)) {
-                    this.DepartField = value;
-                    this.RaisePropertyChanged("Depart");
+                if ((object.ReferenceEquals(this.CheckoutField, value) != true)) {
+                    this.CheckoutField = value;
+                    this.RaisePropertyChanged("Checkout");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FlightNr {
+        public string City {
             get {
-                return this.FlightNrField;
+                return this.CityField;
             }
             set {
-                if ((object.ReferenceEquals(this.FlightNrField, value) != true)) {
-                    this.FlightNrField = value;
-                    this.RaisePropertyChanged("FlightNr");
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string From {
+        public int HotelID {
             get {
-                return this.FromField;
+                return this.HotelIDField;
             }
             set {
-                if ((object.ReferenceEquals(this.FromField, value) != true)) {
-                    this.FromField = value;
-                    this.RaisePropertyChanged("From");
+                if ((this.HotelIDField.Equals(value) != true)) {
+                    this.HotelIDField = value;
+                    this.RaisePropertyChanged("HotelID");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Seats {
+        public string Name {
             get {
-                return this.SeatsField;
+                return this.NameField;
             }
             set {
-                if ((this.SeatsField.Equals(value) != true)) {
-                    this.SeatsField = value;
-                    this.RaisePropertyChanged("Seats");
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string To {
+        public int RoomNr {
             get {
-                return this.ToField;
+                return this.RoomNrField;
             }
             set {
-                if ((object.ReferenceEquals(this.ToField, value) != true)) {
-                    this.ToField = value;
-                    this.RaisePropertyChanged("To");
+                if ((this.RoomNrField.Equals(value) != true)) {
+                    this.RoomNrField = value;
+                    this.RaisePropertyChanged("RoomNr");
                 }
             }
         }
@@ -140,9 +140,9 @@ namespace FlightAttendant.FlightServiceReferenceEmirates {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="NoFlightsException", Namespace="http://schemas.datacontract.org/2004/07/Emirates")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NoRoomException", Namespace="http://schemas.datacontract.org/2004/07/")]
     [System.SerializableAttribute()]
-    public partial class NoFlightsException : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class NoRoomException : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -184,50 +184,50 @@ namespace FlightAttendant.FlightServiceReferenceEmirates {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="FlightServiceReferenceEmirates.IFlightService")]
-    public interface IFlightService {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="HotelServiceReferenceMarriott.IService")]
+    public interface IService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFlightService/GetFlights", ReplyAction="http://tempuri.org/IFlightService/GetFlightsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FlightAttendant.FlightServiceReferenceEmirates.NoFlightsException), Action="http://tempuri.org/IFlightService/GetFlightsNoFlightsExceptionFault", Name="NoFlightsException", Namespace="http://schemas.datacontract.org/2004/07/Emirates")]
-        FlightAttendant.FlightServiceReferenceEmirates.Flight[] GetFlights();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetRooms", ReplyAction="http://tempuri.org/IService/GetRoomsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FlightAttendant.HotelServiceReferenceMarriott.NoRoomException), Action="http://tempuri.org/IService/GetRoomsNoRoomExceptionFault", Name="NoRoomException", Namespace="http://schemas.datacontract.org/2004/07/")]
+        FlightAttendant.HotelServiceReferenceMarriott.Room[] GetRooms();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFlightService/GetFlights", ReplyAction="http://tempuri.org/IFlightService/GetFlightsResponse")]
-        System.Threading.Tasks.Task<FlightAttendant.FlightServiceReferenceEmirates.Flight[]> GetFlightsAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetRooms", ReplyAction="http://tempuri.org/IService/GetRoomsResponse")]
+        System.Threading.Tasks.Task<FlightAttendant.HotelServiceReferenceMarriott.Room[]> GetRoomsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IFlightServiceChannel : FlightAttendant.FlightServiceReferenceEmirates.IFlightService, System.ServiceModel.IClientChannel {
+    public interface IServiceChannel : FlightAttendant.HotelServiceReferenceMarriott.IService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class FlightServiceClient : System.ServiceModel.ClientBase<FlightAttendant.FlightServiceReferenceEmirates.IFlightService>, FlightAttendant.FlightServiceReferenceEmirates.IFlightService {
+    public partial class ServiceClient : System.ServiceModel.ClientBase<FlightAttendant.HotelServiceReferenceMarriott.IService>, FlightAttendant.HotelServiceReferenceMarriott.IService {
         
-        public FlightServiceClient() {
+        public ServiceClient() {
         }
         
-        public FlightServiceClient(string endpointConfigurationName) : 
+        public ServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public FlightServiceClient(string endpointConfigurationName, string remoteAddress) : 
+        public ServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public FlightServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public FlightServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public FlightAttendant.FlightServiceReferenceEmirates.Flight[] GetFlights() {
-            return base.Channel.GetFlights();
+        public FlightAttendant.HotelServiceReferenceMarriott.Room[] GetRooms() {
+            return base.Channel.GetRooms();
         }
         
-        public System.Threading.Tasks.Task<FlightAttendant.FlightServiceReferenceEmirates.Flight[]> GetFlightsAsync() {
-            return base.Channel.GetFlightsAsync();
+        public System.Threading.Tasks.Task<FlightAttendant.HotelServiceReferenceMarriott.Room[]> GetRoomsAsync() {
+            return base.Channel.GetRoomsAsync();
         }
     }
 }

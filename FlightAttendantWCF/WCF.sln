@@ -9,25 +9,26 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Airline", "Airline", "{2D9A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hotel", "Hotel", "{8728F004-923F-4E11-953E-1634581AF2CC}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Hilton(2)", "Hotels\Hilton\", "{C2AF15A8-FBC8-48EA-B7EF-BF0FC5BD25EB}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Marriott", "Marriott\", "{2770D2BC-49BE-4EB7-8C76-D1525D7467A6}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_64606"
-		Debug.AspNetCompiler.PhysicalPath = "Hotels\Hilton\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64606\"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50647"
+		Debug.AspNetCompiler.PhysicalPath = "Marriott\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50647\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_64606"
-		Release.AspNetCompiler.PhysicalPath = "Hotels\Hilton\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64606\"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50647"
+		Release.AspNetCompiler.PhysicalPath = "Marriott\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50647\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "64606"
-		SlnRelativePath = "Hotels\Hilton\"
+		VWDPort = "50647"
+		SlnRelativePath = "Marriott\"
+		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
 Global
@@ -40,17 +41,17 @@ Global
 		{1527571D-2C3A-4F34-8A92-C89A29639E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1527571D-2C3A-4F34-8A92-C89A29639E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1527571D-2C3A-4F34-8A92-C89A29639E1C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C2AF15A8-FBC8-48EA-B7EF-BF0FC5BD25EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2AF15A8-FBC8-48EA-B7EF-BF0FC5BD25EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2AF15A8-FBC8-48EA-B7EF-BF0FC5BD25EB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2AF15A8-FBC8-48EA-B7EF-BF0FC5BD25EB}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{2770D2BC-49BE-4EB7-8C76-D1525D7467A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2770D2BC-49BE-4EB7-8C76-D1525D7467A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2770D2BC-49BE-4EB7-8C76-D1525D7467A6}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2770D2BC-49BE-4EB7-8C76-D1525D7467A6}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1527571D-2C3A-4F34-8A92-C89A29639E1C} = {2D9A3880-F70B-4437-9300-FDDFDED9600E}
-		{C2AF15A8-FBC8-48EA-B7EF-BF0FC5BD25EB} = {8728F004-923F-4E11-953E-1634581AF2CC}
+		{2770D2BC-49BE-4EB7-8C76-D1525D7467A6} = {8728F004-923F-4E11-953E-1634581AF2CC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD328B93-5432-414C-9505-BEC520547801}
