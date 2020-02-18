@@ -6,14 +6,14 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
-namespace Hilton
+namespace App_Code
 {
     [ServiceContract]
     public interface IServiceHilton
     {
 
         [OperationContract]
-        [FaultContract(typeof(NoHiltonException))]
+        [FaultContract(typeof(NoRoomException))]
         IList<Room> GetRooms();
 
 

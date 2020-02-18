@@ -6,7 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
-namespace Hilton
+namespace App_Code
 {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
 
@@ -41,9 +41,9 @@ namespace Hilton
 
             if (rooms == null)
             {
-                NoHiltonException m = new NoHiltonException();
+                NoRoomException m = new NoRoomException();
                 m.Reason = "no rooms found";
-                throw new FaultException<NoHiltonException>(m);
+                throw new FaultException<NoRoomException>(m);
             }
             else
             {
