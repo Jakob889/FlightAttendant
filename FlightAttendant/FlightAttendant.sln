@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightAttendant", "FlightAttendant\FlightAttendant.csproj", "{469B89ED-DE37-409E-8976-B104404AA6FD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{5F287FD6-E7F1-4214-B4CA-EF5FC3A5A2CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestFlightAttendant", "UnitTestFlightAttendant\UnitTestFlightAttendant.csproj", "{3A8CB877-0D22-40FA-8570-2B1C91980A33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{469B89ED-DE37-409E-8976-B104404AA6FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{469B89ED-DE37-409E-8976-B104404AA6FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{469B89ED-DE37-409E-8976-B104404AA6FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A8CB877-0D22-40FA-8570-2B1C91980A33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A8CB877-0D22-40FA-8570-2B1C91980A33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A8CB877-0D22-40FA-8570-2B1C91980A33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A8CB877-0D22-40FA-8570-2B1C91980A33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3A8CB877-0D22-40FA-8570-2B1C91980A33} = {5F287FD6-E7F1-4214-B4CA-EF5FC3A5A2CA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D9230A41-E829-4999-B00A-4F8F8DC8A57F}
