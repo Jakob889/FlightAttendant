@@ -17,7 +17,7 @@ namespace FlightAttendant.Staging
         public int HotelroomID { get; set; }
         public string Name { get; set; }
         public string City { get; set; }
-        public System.DateTime Checkout { get; set; }
         public System.DateTime Checkin { get; set; }
+        public System.DateTime Checkout { get; set; }
     }
 }
