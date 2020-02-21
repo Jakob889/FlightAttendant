@@ -20,7 +20,7 @@ namespace FlightAttendant.Staging
         private void Loadtimer_Tick(object sender, EventArgs e)
         {
             LoadFlights();
-            LoadRooms();
+           // LoadRooms();
         }
 
         private static void LoadFlights()

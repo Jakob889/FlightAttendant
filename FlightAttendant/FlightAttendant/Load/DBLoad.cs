@@ -34,9 +34,9 @@ namespace FlightAttendant.Staging
             return Context.Flights /*.Where(x => x.FlightDate > DateTime.Now)*/.ToList();
         }
 
-        public static List<Flights> GetDestinations()
-        {
-            return Context.Flights.SqlQuery("Select FlightNr FROM dbo.Flights").ToList();
-        }
+       //public static List<Flights> GetDestinations()
+       // {
+       //    return Context.Flights.SqlQuery("Select FlightNr FROM dbo.Flights").ToList();
+       // }
     }
 }

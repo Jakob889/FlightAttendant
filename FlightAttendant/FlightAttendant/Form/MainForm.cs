@@ -20,7 +20,7 @@ namespace FlightAttendant
         {
             InitializeComponent();
             dataGridView1.DataSource = DBLoad.GetFlights();
-            Dropdown_Destination.DataSource = DBLoad.GetDestinations();
+            //Dropdown_Destination.DataSource = DBLoad.GetDestinations();
         }
 
 
