@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlightAttendant.FlightServiceReferenceEmirates;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace FlightAttendant.Staging
     {
 
         private static FlightAttendantEntities ctx;
-        public static FlightAttendantEntities Context
+        public static FlightAttendantEntities DBContext
         {
             get
             {
@@ -21,22 +22,49 @@ namespace FlightAttendant.Staging
                 return ctx;
             }
         }
-        //public void Load(DbSet dBSet)
-        //{
-        //    using (var ctx = new FlightAttendantEntities())
-        //    {
-        //        var dbflights = ctx.Flights;
-        //        return dbflights;
-        //    }
-        //}
-        public static List<Flights> GetFlights()
+
+
+        public static List<Hotelrooms> GetHotelrooms(string city, DateTime checkin, DateTime checkout)
         {
-            return Context.Flights /*.Where(x => x.FlightDate > DateTime.Now)*/.ToList();
+            return DBContext.Hotelrooms.Where(x => x.City == city && (x.Checkin) >= checkin && x.Checkout <= checkout).ToList();
+        }
+        public static List<Flights> GetArrivingFlights(string destination, DateTime arrive)
+        {
+            return DBContext.Flights /*.Where(x => x.FlightDate > DateTime.Now)*/.ToList();
+            //var query = DBContext.Flights.Where(x => x.To == destination /*&& x.Arrive >= arrive*/).ToList();
+            //return query;
         }
 
-        public static List<Flights> GetDestinations()
+        public static List<Flights> GetDepartingFlights(string location, DateTime depart)
         {
-            return Context.Flights.SqlQuery("Select FlightNr FROM dbo.Flights").ToList();
+            //return DBContext.Flights /*.Where(x => x.FlightDate > DateTime.Now)*/.ToList();
+            return DBContext.Flights.Where(x => x.From == location && x.Depart <= depart).ToList();
         }
+
+        //        public static List<Flights> GetDestinations()
+        //        {
+
+
+
+        //            List<Flights> query =
+        //from flights in DBContext.Flights
+        //group flights by flights.To into destinationGroup
+        //orderby destinationGroup.
+
+
+        //select new { Destinaion = destinationGroup.Key };
+
+        //            return DBContext.Flights
+        //                .GroupBy(f => f.To)
+        //                .Select(g => new
+        //                {
+        //                    To = g.FirstOrDefault()
+        //                    //To = g 
+        //                })
+        //                .ToList();
+
+
+        //        }
     }
 }
+

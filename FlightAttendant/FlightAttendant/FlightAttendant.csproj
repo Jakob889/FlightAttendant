@@ -139,6 +139,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Form\FlightForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FlightForm.Designer.cs">
+      <DependentUpon>FlightForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
       <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Staging\Stage.cs" />
+    <EmbeddedResource Include="Form\FlightForm.resx">
+      <DependentUpon>FlightForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
