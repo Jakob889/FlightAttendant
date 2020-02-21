@@ -30,9 +30,9 @@ namespace FlightAttendant.Staging
         }
         public static List<Flights> GetArrivingFlights(string destination, DateTime arrive)
         {
-            return DBContext.Flights /*.Where(x => x.FlightDate > DateTime.Now)*/.ToList();
-            //var query = DBContext.Flights.Where(x => x.To == destination /*&& x.Arrive >= arrive*/).ToList();
-            //return query;
+            //return DBContext.Flights /*.Where(x => x.FlightDate > DateTime.Now)*/.ToList();
+            var query = DBContext.Flights.Where(x => x.To == destination && x.Arrive >= arrive).ToList();
+            return query;
         }
 
         public static List<Flights> GetDepartingFlights(string location, DateTime depart)
@@ -41,30 +41,37 @@ namespace FlightAttendant.Staging
             return DBContext.Flights.Where(x => x.From == location && x.Depart <= depart).ToList();
         }
 
-        //        public static List<Flights> GetDestinations()
-        //        {
+        public static Dictionary<string, string> GetCountries()
+        {
+            var test = new Dictionary<string, string>();
+            test.Add("SIN", "Singapur");
+            test.Add("DXB", "Dubai");
+            test.Add("ZRH", "Zürich");
+
+            DBContext.Destinations.Select(s => new { s.Key = "", s.Value = "" });
+
+            return test;
+            //        List<Flights> query =
+            //from flights in DBContext.Flights
+            //group flights by flights.To into destinationGroup
+            //orderby destinationGroup.
+
+            //select new { Destinaion = destinationGroup.Key };
 
 
 
-        //            List<Flights> query =
-        //from flights in DBContext.Flights
-        //group flights by flights.To into destinationGroup
-        //orderby destinationGroup.
+            //                    return DBContext.Flights
+            //                        .GroupBy(f => f.To)
+            //                        .Select(g => new
+            //                        {
+            //                            To = g.FirstOrDefault()
+            //        //To = g 
+            //    })
+            //                        .ToList();
 
 
-        //select new { Destinaion = destinationGroup.Key };
+        }
 
-        //            return DBContext.Flights
-        //                .GroupBy(f => f.To)
-        //                .Select(g => new
-        //                {
-        //                    To = g.FirstOrDefault()
-        //                    //To = g 
-        //                })
-        //                .ToList();
-
-
-        //        }
     }
 }
 

@@ -10,7 +10,7 @@ namespace UnitTestFlightAttendant
         [TestMethod]
         public void TestWCFDataLoadFlights()
         {
-            var flightServiceClient = new FlightServiceReferenceEmirates.FlightServiceClient();
+            var flightServiceClient = new FlightAttendant.FlightServiceReferenceEmirates.FlightServiceClient();
 
             var flights = flightServiceClient.GetFlights();
 

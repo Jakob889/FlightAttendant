@@ -134,6 +134,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\HotelServiceReferenceBestWestern\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\HotelServiceReferenceMarriott\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -154,6 +159,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Load\DBLoad.cs" />
+    <Compile Include="Staging\ConTest.cs" />
     <Compile Include="Staging\Flights.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -204,6 +210,19 @@
     <None Include="Connected Services\FlightServiceReferenceEmirates\FlightService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\HotelServiceReferenceBestWestern\FlightAttendant.HotelServiceReferenceBestWestern.Room.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HotelServiceReferenceBestWestern\Service.wsdl" />
+    <None Include="Connected Services\HotelServiceReferenceBestWestern\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HotelServiceReferenceBestWestern\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HotelServiceReferenceBestWestern\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\HotelServiceReferenceMarriott\FlightAttendant.HotelServiceReferenceMarriott.Room.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -244,6 +263,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\FlightServiceReferenceEmirates\" />
+    <WCFMetadataStorage Include="Connected Services\HotelServiceReferenceBestWestern\" />
     <WCFMetadataStorage Include="Connected Services\HotelServiceReferenceMarriott\" />
   </ItemGroup>
   <ItemGroup>
@@ -266,6 +286,13 @@
     <None Include="Connected Services\HotelServiceReferenceMarriott\configuration91.svcinfo" />
     <None Include="Connected Services\HotelServiceReferenceMarriott\configuration.svcinfo" />
     <None Include="Connected Services\HotelServiceReferenceMarriott\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\HotelServiceReferenceBestWestern\Service.disco" />
+    <None Include="Connected Services\HotelServiceReferenceBestWestern\configuration91.svcinfo" />
+    <None Include="Connected Services\HotelServiceReferenceBestWestern\configuration.svcinfo" />
+    <None Include="Connected Services\HotelServiceReferenceBestWestern\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

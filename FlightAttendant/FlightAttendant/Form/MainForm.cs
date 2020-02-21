@@ -21,7 +21,9 @@ namespace FlightAttendant
             InitializeComponent();
 
             //Dropdown_Destination.DataSource = DBLoad.GetDestinations();
-
+            Dropdown_Destination.DataSource = new BindingSource(DBLoad.GetCountries(), null);
+            Dropdown_Destination.DisplayMember = "value";
+            Dropdown_Destination.ValueMember = "key";
 
         }
 
@@ -45,12 +47,13 @@ namespace FlightAttendant
 
         private void button_Search_Click(object sender, EventArgs e)
         {
-            
-            dataGridView1.Refresh();
 
+            dataGridView1.Columns.Clear();
+                
             var arrDate = datePicker_arr.Value.Date;
             var depDate = datePicker_dep.Value.Date;
-            dataGridView1.DataSource = DBLoad.GetHotelrooms("DUB", arrDate, depDate);
+            var selectedDestination = (KeyValuePair<string,string>)Dropdown_Destination.SelectedItem;
+            dataGridView1.DataSource = DBLoad.GetHotelrooms(selectedDestination.Key, arrDate, depDate);
 
 
             var button = new DataGridViewButtonColumn();

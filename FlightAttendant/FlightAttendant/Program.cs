@@ -15,6 +15,9 @@ namespace FlightAttendant
         [STAThread]
         static void Main()
         {
+            var conTest = new ConTest();
+            conTest.TestWCFConnection();
+
             var stage = new Stage();
             stage.Load();
 
