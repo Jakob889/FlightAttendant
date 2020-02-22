@@ -16,8 +16,12 @@ namespace FlightAttendant.Staging
             {
                 var flightServiceClient = new FlightServiceReferenceEmirates.FlightServiceClient();
                 flightServiceClient.GetFlights();
+                var SwissServiceClient = new FlightServiceReferenceSwiss.ServiceClient();
+                SwissServiceClient.GetFlights();
                 var MarriottServiceClient = new HotelServiceReferenceMarriott.ServiceClient();
                 MarriottServiceClient.GetRooms();
+                var BestWesternServiceClient = new HotelServiceReferenceBestWestern.ServiceClient();
+                BestWesternServiceClient.GetRooms();
             }
             catch (Exception ex)
             {

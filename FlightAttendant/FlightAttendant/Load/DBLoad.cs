@@ -26,7 +26,7 @@ namespace FlightAttendant.Staging
 
         public static List<Hotelrooms> GetHotelrooms(string city, DateTime checkin, DateTime checkout)
         {
-            return DBContext.Hotelrooms.Where(x => x.City == city && (x.Checkin) >= checkin && x.Checkout <= checkout).ToList();
+            return DBContext.Hotelrooms.Where(x => x.City == city && (x.Checkin) <= checkin && x.Checkout >= checkout).ToList();
         }
         public static List<Flights> GetArrivingFlights(string destination, DateTime arrive)
         {
@@ -43,32 +43,8 @@ namespace FlightAttendant.Staging
 
         public static Dictionary<string, string> GetCountries()
         {
-            var test = new Dictionary<string, string>();
-            test.Add("SIN", "Singapur");
-            test.Add("DXB", "Dubai");
-            test.Add("ZRH", "Zürich");
 
-            DBContext.Destinations.Select(s => new { s.Key = "", s.Value = "" });
-
-            return test;
-            //        List<Flights> query =
-            //from flights in DBContext.Flights
-            //group flights by flights.To into destinationGroup
-            //orderby destinationGroup.
-
-            //select new { Destinaion = destinationGroup.Key };
-
-
-
-            //                    return DBContext.Flights
-            //                        .GroupBy(f => f.To)
-            //                        .Select(g => new
-            //                        {
-            //                            To = g.FirstOrDefault()
-            //        //To = g 
-            //    })
-            //                        .ToList();
-
+            return DBContext.Citykey.ToDictionary(t => t.AirportCode, t => t.City);
 
         }
 

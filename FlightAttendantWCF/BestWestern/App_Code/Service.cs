@@ -20,16 +20,21 @@ public class Service : IService
             new Room { City = "JFK", RoomNr = 406, Checkin = "2020-3-24", Checkout = "2020-3-28"},
             new Room { City = "JFK", RoomNr = 510, Checkin = "2020-3-27", Checkout = "2020-3-29"},
             new Room { City = "JFK", RoomNr = 604, Checkin = "2020-3-18", Checkout = "2020-3-19"},
+            new Room { City = "JFK", RoomNr = 306, Checkin = "2020-3-2", Checkout = "2020-3-28"},
+            new Room { City = "JFK", RoomNr = 210, Checkin = "2020-3-7", Checkout = "2020-3-29"},
 
-            new Room { City = "LCY", RoomNr = 016, Checkin = "2020-3-2",  Checkout = "2020-3-4"},
-            new Room { City = "LCY", RoomNr = 029, Checkin = "2020-3-6",  Checkout = "2020-3-15"},
-            new Room { City = "LCY", RoomNr = 204, Checkin = "2020-3-9",  Checkout = "2020-3-14"},
-            new Room { City = "LCY", RoomNr = 205, Checkin = "2020-3-17", Checkout = "2020-3-21"},
-            new Room { City = "LCY", RoomNr = 306, Checkin = "2020-3-22", Checkout = "2020-3-28"},
-            new Room { City = "LCY", RoomNr = 505, Checkin = "2020-3-23", Checkout = "2020-3-26"},
-            new Room { City = "LCY", RoomNr = 606, Checkin = "2020-3-25", Checkout = "2020-3-28"},
-            new Room { City = "LCY", RoomNr = 610, Checkin = "2020-3-16", Checkout = "2020-3-20"},
-            new Room { City = "LCY", RoomNr = 704, Checkin = "2020-3-18", Checkout = "2020-3-19"}
+            new Room { City = "LHR", RoomNr = 016, Checkin = "2020-3-2",  Checkout = "2020-3-4"},
+            new Room { City = "LHR", RoomNr = 029, Checkin = "2020-3-6",  Checkout = "2020-3-15"},
+            new Room { City = "LHR", RoomNr = 204, Checkin = "2020-3-9",  Checkout = "2020-3-14"},
+            new Room { City = "LHR", RoomNr = 205, Checkin = "2020-3-17", Checkout = "2020-3-21"},
+            new Room { City = "LHR", RoomNr = 306, Checkin = "2020-3-22", Checkout = "2020-3-28"},
+            new Room { City = "LHR", RoomNr = 505, Checkin = "2020-3-23", Checkout = "2020-3-26"},
+            new Room { City = "LHR", RoomNr = 606, Checkin = "2020-3-25", Checkout = "2020-3-28"},
+            new Room { City = "LHR", RoomNr = 405, Checkin = "2020-3-3", Checkout = "2020-3-26"},
+            new Room { City = "LHR", RoomNr = 406, Checkin = "2020-3-5", Checkout = "2020-3-28"},
+            new Room { City = "LHR", RoomNr = 610, Checkin = "2020-3-16", Checkout = "2020-3-20"},
+            new Room { City = "LHR", RoomNr = 704, Checkin = "2020-3-18", Checkout = "2020-3-19"}
+
 
     };
 
