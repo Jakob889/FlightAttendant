@@ -8,24 +8,24 @@ namespace FlightAttendant.Book
 {
     public class Booked
     {
-        public static Booked MyBook { get; private set; }
-        private int BookingID { get; set; }
-        private string Hotelname { get; set; }
-        private string City { get; set; }
-        private DateTime Checkin { get; set; }
-        private DateTime Checkout { get; set; }
-        private string DownFlightNr { get; set; }
-        private DateTime Downflightdepart { get; set; }
-        private DateTime Downflightarrive { get; set; }
-        private string BackFlightNr { get; set; }
-        private DateTime Backflightdepart { get; set; }
-        private DateTime Backflightarrive { get; set; }
+        public static Booked MyBooking { get; private set; }
+        public int BookingID { get; set; }
+        public string Hotelname { get; set; }
+        public string City { get; set; }
+        public DateTime Checkin { get; set; }
+        public DateTime Checkout { get; set; }
+        public string DownFlightNr { get; set; }
+        public DateTime Downflightdepart { get; set; }
+        public DateTime Downflightarrive { get; set; }
+        public string BackFlightNr { get; set; }
+        public DateTime Backflightdepart { get; set; }
+        public DateTime Backflightarrive { get; set; }
 
         public Booked()
         {
-            if (MyBook == null)
+            if (MyBooking == null)
             {
-                MyBook = this;
+                MyBooking = this;
             }
         }
 
@@ -38,14 +38,14 @@ namespace FlightAttendant.Book
             Checkout = checkout;
         }
 
-        public void BookFlightDown(string flight,DateTime downflightdepart,DateTime downflightarrive)
+        public void BookFlightDown(string flight, DateTime downflightdepart, DateTime downflightarrive)
         {
             DownFlightNr = flight;
             Downflightdepart = downflightdepart;
             Downflightarrive = downflightarrive;
         }
 
-        public void BookFlightBack(string flight,DateTime backflightdepart, DateTime backflightarrive)
+        public void BookFlightBack(string flight, DateTime backflightdepart, DateTime backflightarrive)
         {
             BackFlightNr = flight;
             Backflightdepart = backflightdepart;

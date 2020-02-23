@@ -41,6 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.flightBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightBindingSource)).BeginInit();
@@ -54,7 +55,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(995, 386);
+            this.dataGridView1.Size = new System.Drawing.Size(995, 362);
             this.dataGridView1.TabIndex = 0;
             // 
             // dataTableBindingSource
@@ -97,7 +98,7 @@
             this.button_Search.TabIndex = 6;
             this.button_Search.Text = "Search";
             this.button_Search.UseVisualStyleBackColor = false;
-            this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
+            this.button_Search.Click += new System.EventHandler(this.ButtonSearch);
             // 
             // label1
             // 
@@ -143,11 +144,22 @@
             // 
             this.flightBindingSource.DataSource = typeof(FlightAttendant.FlightServiceReferenceEmirates.Flight);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label2.Location = new System.Drawing.Point(59, 307);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(303, 21);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Test Daten zwischen 1. und 31. März";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1134, 747);
+            this.ClientSize = new System.Drawing.Size(1126, 747);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -181,6 +193,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.BindingSource flightBindingSource;
+        private System.Windows.Forms.Label label2;
     }
 }
 

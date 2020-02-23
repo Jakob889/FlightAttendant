@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using UnitTestFlightAttendant;
+using FlightAttendant;
 
 namespace UnitTestFlightAttendant
 {
@@ -14,7 +15,7 @@ namespace UnitTestFlightAttendant
 
             var flights = flightServiceClient.GetFlights();
 
-            Assert.IsTrue(flightServiceClient.CurrentConnectionCount == 0);
+            Assert.IsTrue(flights == null);
         }
     }
 }

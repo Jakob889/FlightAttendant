@@ -1,16 +1,14 @@
-﻿using FlightAttendant.Staging;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Timers;
 using Timer = System.Windows.Forms.Timer;
 using FlightAttendant.Book;
+using FlightAttendant.Staging;
 
 namespace FlightAttendant
 {
@@ -30,7 +28,7 @@ namespace FlightAttendant
             
         }
 
-        private void dataGridCart_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridLoad(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.Columns.Contains("book") && e.ColumnIndex == dataGridView1.Columns["book"].Index)//Specify which column contains Button in DGV
             {
@@ -47,14 +45,14 @@ namespace FlightAttendant
 
                 var flightsForm = new FlightAttendant.FlightForm(valueLocation, valueArrive, valueDepart);
                 
-                Booked.MyBook.BookHotel(valuehotel, valueLocation, valueArrive, valueDepart);
+                Booked.MyBooking.BookHotel(valuehotel, valueLocation, valueArrive, valueDepart);
 
                 flightsForm.ShowDialog();
 
             }
         }
 
-        private void button_Search_Click(object sender, EventArgs e)
+        private void ButtonSearch(object sender, EventArgs e)
         {
 
             dataGridView1.Columns.Clear();
@@ -75,7 +73,7 @@ namespace FlightAttendant
             button.Name = "book";
             button.UseColumnTextForButtonValue = true;
 
-            dataGridView1.CellClick += new DataGridViewCellEventHandler(dataGridCart_CellClick);
+            dataGridView1.CellClick += new DataGridViewCellEventHandler(DataGridLoad);
             this.dataGridView1.DefaultCellStyle.Font = new Font("Tahoma", 11);
             this.dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 11);
 

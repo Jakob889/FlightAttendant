@@ -130,6 +130,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Book\Booked.cs" />
+    <Compile Include="Book\ConfirmationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book\ConfirmationForm.Designer.cs">
+      <DependentUpon>ConfirmationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\FlightServiceReferenceEmirates\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -191,6 +197,9 @@
       <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Staging\Stage.cs" />
+    <EmbeddedResource Include="Book\ConfirmationForm.resx">
+      <DependentUpon>ConfirmationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FlightForm.resx">
       <DependentUpon>FlightForm.cs</DependentUpon>
     </EmbeddedResource>

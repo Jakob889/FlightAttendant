@@ -31,8 +31,7 @@ namespace FlightAttendant.Staging
         public static List<Flights> GetArrivingFlights(string destination, DateTime arrive)
         {
             //return DBContext.Flights /*.Where(x => x.FlightDate > DateTime.Now)*/.ToList();
-            var query = DBContext.Flights.Where(x => x.To == destination && x.Arrive >= arrive).ToList();
-            return query;
+            return DBContext.Flights.Where(x => x.To == destination && x.Arrive >= arrive).ToList();   
         }
 
         public static List<Flights> GetDepartingFlights(string location, DateTime depart)
