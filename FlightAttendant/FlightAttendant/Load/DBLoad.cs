@@ -30,14 +30,14 @@ namespace FlightAttendant.Staging
         }
         public static List<Flights> GetArrivingFlights(string destination, DateTime arrive)
         {
-            //return DBContext.Flights /*.Where(x => x.FlightDate > DateTime.Now)*/.ToList();
-            return DBContext.Flights.Where(x => x.To == destination && x.Arrive >= arrive).ToList();   
+         
+            return DBContext.Flights.Where(x => x.To == destination && x.Arrive >= arrive && x.Seats >= 1).ToList();   
         }
 
         public static List<Flights> GetDepartingFlights(string location, DateTime depart)
         {
-            //return DBContext.Flights /*.Where(x => x.FlightDate > DateTime.Now)*/.ToList();
-            return DBContext.Flights.Where(x => x.From == location && x.Depart <= depart).ToList();
+            
+            return DBContext.Flights.Where(x => x.From == location && x.Depart <= depart && x.Seats >= 1).ToList();
         }
 
         public static Dictionary<string, string> GetCountries()
