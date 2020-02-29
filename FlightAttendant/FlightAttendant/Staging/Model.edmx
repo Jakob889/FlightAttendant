@@ -5,6 +5,13 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="FlightAttendantModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Citykey">
+          <Key>
+            <PropertyRef Name="AirportCode" />
+          </Key>
+          <Property Name="AirportCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="City" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
         <EntityType Name="Flights">
           <Key>
             <PropertyRef Name="FlightNr" />
@@ -27,6 +34,7 @@
           <Property Name="Checkin" Type="date" Nullable="false" />
         </EntityType>
         <EntityContainer Name="FlightAttendantModelStoreContainer">
+          <EntitySet Name="Citykey" EntityType="Self.Citykey" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Flights" EntityType="Self.Flights" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Hotelrooms" EntityType="Self.Hotelrooms" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -37,6 +45,7 @@
         <EntityContainer Name="FlightAttendantEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Flights" EntityType="FlightAttendantModel.Flights" />
           <EntitySet Name="Hotelrooms" EntityType="FlightAttendantModel.Hotelrooms" />
+          <EntitySet Name="Citykey" EntityType="FlightAttendantModel.Citykey" />
           </EntityContainer>
         <EntityType Name="Flights">
           <Key>
@@ -58,6 +67,13 @@
           <Property Name="City" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Checkout" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Checkin" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="Citykey">
+          <Key>
+            <PropertyRef Name="AirportCode" />
+          </Key>
+          <Property Name="AirportCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -85,6 +101,14 @@
                 <ScalarProperty Name="City" ColumnName="City" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="HotelroomID" ColumnName="HotelroomID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Citykey">
+            <EntityTypeMapping TypeName="FlightAttendantModel.Citykey">
+              <MappingFragment StoreEntitySet="Citykey">
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="AirportCode" ColumnName="AirportCode" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

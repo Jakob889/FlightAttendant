@@ -20,12 +20,13 @@ namespace FlightAttendant.Staging
         {
         }
     
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //    throw new UnintentionalCodeFirstException();
-        //}
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            throw new UnintentionalCodeFirstException();
+        }
     
         public DbSet<Flights> Flights { get; set; }
         public DbSet<Hotelrooms> Hotelrooms { get; set; }
+        public DbSet<Citykey> Citykey { get; set; }
     }
 }
